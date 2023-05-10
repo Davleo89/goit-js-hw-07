@@ -31,7 +31,7 @@ modalWindows.forEach((image) => {
   });
 });
 
-let lightbox = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery .gallery__link', {
   captionsData: 'alt',
   captionDelay: 250
 });
