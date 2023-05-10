@@ -1,6 +1,5 @@
 import { galleryItems } from "./gallery-items.js";
 
-
 console.log(galleryItems);
 
 const galleryList = document.querySelector(".gallery");
@@ -21,12 +20,12 @@ const galleryCollage = galleryItems
 
 galleryList.insertAdjacentHTML("afterbegin", galleryCollage);
 
-const a = galleryList.querySelectorAll(".gallery__image");
+const modalWindows = galleryList.querySelectorAll(".gallery__image");
 
-a.forEach((image) => {
+modalWindows.forEach((image) => {
   image.addEventListener("click", (event) => {
     event.preventDefault();
-    const imageURL = event.target.getAttribute("data-source");
+    const imageURL = event.target.getAttribute("src");
     const lightbox = basicLightbox.create(`<img src="${imageURL}">`);
     lightbox.show();
   });
@@ -36,5 +35,3 @@ let lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250
 });
-
-console.log(lightbox);

@@ -22,9 +22,9 @@ const galleryCollage = galleryItems
 
 galleryList.insertAdjacentHTML("afterbegin", galleryCollage);
 
-const a = galleryList.querySelectorAll(".gallery__image");
+const modalWindows = galleryList.querySelectorAll(".gallery__image");
 
-a.forEach((image) => {
+modalWindows.forEach((image) => {
   image.addEventListener("click", (event) => {
     event.preventDefault();
     const imageURL = event.target.getAttribute("data-source");
