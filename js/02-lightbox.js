@@ -20,18 +20,7 @@ const galleryCollage = galleryItems
 
 galleryList.insertAdjacentHTML("afterbegin", galleryCollage);
 
-/*const modalWindows = galleryList.querySelectorAll(".gallery__image");
-
-modalWindows.forEach((image) => {
-  image.addEventListener("click", (event) => {
-    event.preventDefault();
-    const imageURL = event.target.getAttribute("src");
-    const lightbox = basicLightbox.create(`<img src="${imageURL}">`);
-    lightbox.show();
-  });
-});*/
-
-new SimpleLightbox('.gallery .gallery__link', {
+let modalGallery = new SimpleLightbox('.gallery .gallery__link', {
   captionsData: 'alt',
   captionDelay: 250
 });
